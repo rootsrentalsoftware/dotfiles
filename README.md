@@ -1,4 +1,4 @@
-[Roots][repo] dotfiles
+Dotfiles
 ==========================
 
 These are the base dotfiles that I start with when I set up
@@ -12,10 +12,9 @@ The setup process will:
 
 * Download the dotfiles on your computer
   (by default it will suggest `~/projects/dotfiles`).
-* Create some additional [directories][dirs].
-* [Symlink][symlink] the [Git][git], [shell][shell],
-* Install applications / command-line tools for [macOS][install]
-* Install [VS Code][vscode plugins] plugins.
+* Symlink the Git & Shell
+* Install applications / command-line tools for MacOS
+* Install Vs Code plugins.
 
 🎨 Customize
 ------------
@@ -25,10 +24,10 @@ The setup process will:
 The dotfiles can be easily extended to suit additional local
 requirements by using the following files:
 
-#### `~/.bash.local`
+#### `~/.zsh.local`
 
-The `~/.bash.local` file will be automatically sourced after all
-the other [Bash related files][shell], thus, allowing its content
+The `~/.zsh.local` file will be automatically sourced after all
+the other Zsh related files, thus, allowing its content
 to add to or overwrite the existing aliases, settings, `PATH`, etc.
 
 Here is an example:
