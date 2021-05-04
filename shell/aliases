@@ -1,0 +1,45 @@
+#!/bin/bash
+
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
+alias ......='cd ../../../../..'
+alias cd..="cd .."
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+alias cp="cp -iv"
+#             │└─ list copied files
+#             └─ prompt before overwriting an existing file
+
+alias mkdir="mkdir -pv"
+#                   │└─ list created directories
+#                   └─ create intermediate directories
+
+alias mv="mv -iv"
+#             │└─ list moved files
+#             └─ prompt before overwriting an existing file
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+alias :q="exit"
+alias c="clear"
+alias ch="history -c && > ~/.bash_history"
+alias g="git"
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias map="xargs -n1"
+alias path='printf "%b\n" "${PATH//:/\\n}"'
+alias q="exit"
+alias reload='source ~/.zshrc'
+alias nproc='sysctl -n hw.ncpu'
+
+# List directory contents
+alias lsa='ls -lah'
+alias l='ls -lah'
+alias ll='ls -lh'
+alias la='ls -lAh'
+
+# Bundler aliases
+alias bundle='MAKE="make -j$(nproc)" bundle'
+alias be='bundle exec'
