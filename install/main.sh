@@ -13,7 +13,7 @@ print_in_purple "\n • Installs\n\n"
 
 ./git.sh
 ./asdf.sh
-./dev_tools
+./dev_tools.sh
 ./image_tools.sh
 
 ./vscode.sh
