@@ -28,9 +28,7 @@ install_plugin() {
 
 print_in_purple "\n   Asdf Version Manager\n\n"
 
-brew_install "CoreUtils" "coreutils"
-brew_install "Curl" "curl"
-brew_install "Asdf" "asdf"
+execute "brew install coreutils curl gpg asdf" "Install Asdf"
 
 add_asdf_config
 
