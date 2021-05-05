@@ -8,4 +8,4 @@ cd "$(dirname "${BASH_SOURCE[0]}")" \
 
 print_in_purple "\n   Misc\n\n"
 
-brew_install "Toggl: Time tracking", "toggle"
+brew_install "Toggl: Time tracking" "toggle"
