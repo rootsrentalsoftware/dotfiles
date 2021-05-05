@@ -22,4 +22,11 @@ execute "brew services restart --all" "Restart services"
 
 brew_install 'Docker Desktop' 'docker' '--cask'
 brew_install 'Postgres.app' 'postgres' '--cask'
+
+# postgres
+execute \
+    "sudo mkdir -p /etc/paths.d &&
+    echo /Applications/Postgres.app/Contents/Versions/latest/bin | sudo tee /etc/paths.d/postgresapp" \
+    "Postgres.app (cli)"
+
 brew_install 'iTerm2' 'iterm2' '--cask'
