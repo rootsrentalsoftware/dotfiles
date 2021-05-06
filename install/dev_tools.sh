@@ -6,6 +6,21 @@ cd "$(dirname "${BASH_SOURCE[0]}")" \
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+install_postgres() {
+    brew_install 'Postgres.app' 'postgres' '--cask'
+
+    execute \
+        "sudo mkdir -p /etc/paths.d &&
+        echo /Applications/Postgres.app/Contents/Versions/latest/bin | sudo tee /etc/paths.d/postgresapp" \
+        "Postgres.app (CLI)"
+
+    if [ -d "/Applications/Postgres.app" ]; then
+        open "/Applications/Postgres.app"
+    fi
+}
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
 print_in_purple "\n   Development Tools\n\n"
 
 brew_install 'Heroku (CLI)' 'heroku' '' 'heroku/brew'
@@ -21,12 +36,5 @@ execute "brew services restart --all" "Restart services"
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 brew_install 'Docker Desktop' 'docker' '--cask'
-brew_install 'Postgres.app' 'postgres' '--cask'
-
-# postgres
-execute \
-    "sudo mkdir -p /etc/paths.d &&
-    echo /Applications/Postgres.app/Contents/Versions/latest/bin | sudo tee /etc/paths.d/postgresapp" \
-    "Postgres.app (cli)"
-
 brew_install 'iTerm2' 'iterm2' '--cask'
+install_postgres

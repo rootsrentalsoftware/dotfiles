@@ -6,8 +6,7 @@ cd "$(dirname "${BASH_SOURCE[0]}")" \
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-print_in_purple "\n   Misc\n\n"
+print_in_purple "\n   Browsers\n\n"
 
-brew_install "Slack" "slack"
-brew_install "Toggl: Time tracking" "toggl"
-brew_install "Rectangle window manager" "rectangle"
+brew_install "Google Chrome" "google-chrome"
+brew_install "Firefox" "firefox"

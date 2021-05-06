@@ -31,7 +31,7 @@ install() {
 
 main() {
 
-    print_in_purple "\n   Bugdetcam Webshop\n\n"
+    print_in_purple "\n   Budgetcam Webshop\n\n"
 
     clone_repo
     install

@@ -8,7 +8,7 @@ cd "$(dirname "${BASH_SOURCE[0]}")" \
 
 change_default_zsh() {
 
-    declare -r LOCAL_SHELL_CONFIG_FILE="$HOME/.zsh.local"
+    declare -r LOCAL_SHELL_CONFIG_FILE="$HOME/.zshrc.local"
 
     local configs=""
     local pathConfig=""

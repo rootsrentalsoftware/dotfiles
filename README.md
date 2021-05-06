@@ -24,9 +24,9 @@ The setup process will:
 The dotfiles can be easily extended to suit additional local
 requirements by using the following files:
 
-#### `~/.zsh.local`
+#### `~/.zshrc.local`
 
-The `~/.zsh.local` file will be automatically sourced after all
+The `~/.zshrc.local` file will be automatically sourced after all
 the other Zsh related files, thus, allowing its content
 to add to or overwrite the existing aliases, settings, `PATH`, etc.
 

@@ -16,6 +16,7 @@ print_in_purple "\n • Installs\n\n"
 ./dev_tools.sh
 ./image_tools.sh
 
+./browsers.sh
 ./vscode.sh
 ./fonts.sh
 ./quick_look.sh

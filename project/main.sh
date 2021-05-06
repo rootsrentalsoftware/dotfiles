@@ -56,7 +56,7 @@ create_projects_folder() {
 
     fi
 
-    mkdir -p "$projectsDirectory"
+    mkdir -p $projectsDirectory
     print_result $? "Create '$projectsDirectory'" "true"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

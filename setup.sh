@@ -226,7 +226,7 @@ main() {
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    ./create_sym_links.sh "$@"
+    ./move_files.sh "$@"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -235,22 +235,6 @@ main() {
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     ./project/main.sh
-
-    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-    if cmd_exists "git"; then
-
-        if [ "$(git config --get remote.origin.url)" != "$DOTFILES_ORIGIN" ]; then
-            ./initialize_git_repo.sh "$DOTFILES_ORIGIN"
-        fi
-
-        # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-        if ! $skipQuestions; then
-            ./update_content.sh
-        fi
-
-    fi
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 

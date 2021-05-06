@@ -11,6 +11,8 @@ create_symlinks() {
 
         "shell/aliases"
         "shell/zshrc"
+        "shell/gemrc"
+        "shell/irbrc"
 
         "git/gitattributes"
         "git/gitconfig"
@@ -38,11 +40,8 @@ create_symlinks() {
         if [ ! -e "$targetFile" ] || $skipQuestions; then
 
             execute \
-                "ln -fs $sourceFile $targetFile" \
+                "mv $sourceFile $targetFile" \
                 "$targetFile → $sourceFile"
-
-        elif [ "$(readlink "$targetFile")" == "$sourceFile" ]; then
-            print_success "$targetFile → $sourceFile"
         else
 
             if ! $skipQuestions; then
@@ -53,7 +52,7 @@ create_symlinks() {
                     rm -rf "$targetFile"
 
                     execute \
-                        "ln -fs $sourceFile $targetFile" \
+                        "mv $sourceFile $targetFile" \
                         "$targetFile → $sourceFile"
 
                 else
@@ -71,7 +70,7 @@ create_symlinks() {
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 main() {
-    print_in_purple "\n • Create symbolic links\n\n"
+    print_in_purple "\n • Create links\n\n"
     create_symlinks "$@"
 }
 

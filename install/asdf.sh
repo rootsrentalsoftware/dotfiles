@@ -13,7 +13,7 @@ add_asdf_config() {
   declare -r CONFIG=". $(brew --prefix asdf)/asdf.sh"
 
   execute \
-    "echo -e $CONFIG >> $LOCAL_SHELL_CONFIG_FILE && reload" \
+    "echo -e $CONFIG >> $LOCAL_SHELL_CONFIG_FILE && source $LOCAL_SHELL_CONFIG_FILE" \
     "Asdf (update $LOCAL_SHELL_CONFIG_FILE)"
 
 }
@@ -28,7 +28,7 @@ install_plugin() {
 
 print_in_purple "\n   Asdf Version Manager\n\n"
 
-execute "brew install coreutils curl gpg asdf" "Install Asdf"
+brew_install "Asdf" "coreutils curl gpg gawk asdf"
 
 add_asdf_config
 
