@@ -5,7 +5,7 @@ cd "$(dirname "${BASH_SOURCE[0]}")" \
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-create_symlinks() {
+move_files() {
 
     declare -a FILES_TO_SYMLINK=(
 
@@ -71,7 +71,7 @@ create_symlinks() {
 
 main() {
     print_in_purple "\n • Create links\n\n"
-    create_symlinks "$@"
+    move_files "$@"
 }
 
 main "$@"
