@@ -34,6 +34,7 @@ install_plugin "Ruby syntax" "rebornix.ruby"
 install_plugin "Yaml syntax" "redhat.vscode-yaml"
 install_plugin "Slim syntax" "sianglim.slim"
 install_plugin "Quick New File & Folder" "wenfangdu.faster-new"
+install_plugin "EditorConfig for VS Code" "editorconfig.editorconfig"
 
 # Close VSCode
 osascript -e 'quit app "Visual Studio Code"'
