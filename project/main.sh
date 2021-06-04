@@ -12,7 +12,7 @@ declare skipQuestions=false
 print_in_purple "\n • Projects\n\n"
 
 heroku_login() {
-    ask_for_confirmation "Are you already logged into Heroku?"
+    ask_for_confirmation "Are you already logged into Heroku (CLI)?"
 
     if ! answer_is_yes; then
         heroku login

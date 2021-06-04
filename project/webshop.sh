@@ -24,7 +24,7 @@ install() {
     execute "asdf install" "Install languages"
 
     gem install bundler --conservative
-    execute "bundle install -j $(nproc)" "Bundle install"
+    execute "bundle install" "Bundle install"
     execute "bundle exec yarn" "Yarn install"
 
 }
