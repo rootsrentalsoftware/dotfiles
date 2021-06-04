@@ -9,14 +9,9 @@ move_files() {
 
     declare -a FILES_TO_SYMLINK=(
 
-        "shell/aliases"
-        "shell/zshrc"
         "shell/gemrc"
         "shell/irbrc"
-
-        "git/gitattributes"
-        "git/gitconfig"
-        "git/gitignore"
+        "shell/pryrc"
 
     )
 

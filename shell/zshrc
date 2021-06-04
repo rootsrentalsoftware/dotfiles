@@ -1,8 +1,0 @@
-#!/bin/bash
-
-# Load our dotfiles like ~/.aliases, etc…
-for file in $HOME/.{aliases,zshrc.local}; do
-    [ -r "$file" ] && source "$file"
-done
-
-unset file
