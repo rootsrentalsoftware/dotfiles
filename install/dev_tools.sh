@@ -7,7 +7,7 @@ cd "$(dirname "${BASH_SOURCE[0]}")" \
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 install_postgres() {
-    brew_install 'Postgres.app' 'postgres' '--cask'
+    brew_install 'Postgres.app' 'postgres-unofficial' '--cask'
 
     execute \
         "sudo mkdir -p /etc/paths.d &&
