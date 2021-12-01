@@ -21,6 +21,11 @@ brew 'zsh'
 brew 'bat'
 brew 'exa'
 
+# Zsh extensions
+brew 'zsh-autosuggestions'
+brew 'zsh-history-substring-search'
+brew 'zsh-syntax-highlighting'
+
 # GitHub
 brew 'gh'
 cask 'github'
@@ -54,7 +59,7 @@ cask 'font-jetbrains-mono'
 cask 'font-jetbrains-mono-nerd-font'
 
 # Misc
-brew 'starship'
+brew 'pure'
 
 # cask 'alfred'
 cask 'around'

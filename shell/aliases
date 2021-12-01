@@ -1,0 +1,63 @@
+# Changing/making/removing directory
+setopt auto_pushd
+setopt pushd_ignore_dups
+setopt pushd_minus
+
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
+alias ......='cd ../../../../..'
+
+alias md='mkdir -p'
+alias rd=rmdir
+
+alias ls='exa'
+alias cat='bat'
+
+alias nproc='sysctl -n hw.ncpu'
+
+# List directory contents
+alias lsa='ls -lah'
+alias l='ls -lah'
+alias ll='ls -lh'
+alias la='ls -lAh'
+
+alias cask='brew cask'
+alias where=which
+
+# typos
+alias brwe=brew
+alias gti=git
+alias yearn=yarn
+alias forman=foreman
+
+# Shortcuts
+alias chmox='chmod +x'
+alias tailf='tail -f'
+alias reload='source ~/.zshrc'
+alias q='exit'
+
+# Bundler aliases
+alias bundle='MAKE="make -j$(nproc)" bundle'
+alias be='bundle exec'
+
+# Rails aliases
+alias r='bin/rails'
+alias s='bin/rspec'
+alias c="bin/cucumber"
+alias rc='bin/rails console'
+alias rr='bin/rake routes'
+alias rw='bin/webpack-dev-server'
+alias o="overmind"
+
+# Git shortcuts
+alias g='git'
+alias gi='git'
+alias gs='git status'
+alias gd='git diff'
+alias gaa='git add --all'
+alias gco='git checkout'
+
+alias push='git push'
+alias pull='git pull'

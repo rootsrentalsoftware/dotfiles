@@ -1,0 +1,34 @@
+# Load our dotfiles like ~/.aliases, etc…
+for file in ~/.{aliases,functions}; do
+    [ -r "$file" ] && source "$file"
+done
+unset file
+
+# Load Shell Completion
+if type brew &>/dev/null; then
+    FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+
+    autoload -Uz compinit
+    compinit
+fi
+
+# Fix for rspec with spring
+export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
+
+# ASDF
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
+
+# Prompt
+autoload -U promptinit; promptinit
+prompt pure
+
+# Nice to haves
+source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# History search
+source /opt/homebrew/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+setopt inc_append_history
+setopt share_history
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down

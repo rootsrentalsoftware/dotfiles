@@ -1,0 +1,16 @@
+function a() {
+  if [ $# -eq 0 ]; then
+    code .
+  else
+    code $1
+  fi
+}
+
+function railss()
+{
+  if [ $# -eq 0 ]; then
+    bin/rails server -b 0.0.0.0 -p 3000
+  else
+    bin/rails server -b 0.0.0.0 -p $1
+  fi
+}

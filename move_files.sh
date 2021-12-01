@@ -9,13 +9,13 @@ move_files() {
 
     declare -a FILES_TO_SYMLINK=(
 
+        "shell/aliases"
+        "shell/functions"
         "shell/gemrc"
+        "shell/hushlogin"
         "shell/irbrc"
         "shell/pryrc"
         "shell/zshrc"
-        "shell/aliases"
-        "shell/functions"
-        "shell/hushlogin"
 
     )
 
