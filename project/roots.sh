@@ -30,8 +30,8 @@ install() {
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     execute "bin/rails db:prepare" "Prepare database"
-    execute "bin/rails db:test:prepare" "Prepare test database"
     execute "bin/rails db:download" "Download database"
+    execute "redis-cli flushall" "Flush sidekiq jobs"
     execute "bin/rails eleasticsearch:reset" "Reindex Elasticsearch"
 
 }

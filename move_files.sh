@@ -12,6 +12,10 @@ move_files() {
         "shell/gemrc"
         "shell/irbrc"
         "shell/pryrc"
+        "shell/zshrc"
+        "shell/aliases"
+        "shell/functions"
+        "shell/hushlogin"
 
     )
 
@@ -35,7 +39,7 @@ move_files() {
         if [ ! -e "$targetFile" ] || $skipQuestions; then
 
             execute \
-                "mv $sourceFile $targetFile" \
+                "cp $sourceFile $targetFile" \
                 "$targetFile → $sourceFile"
         else
 
@@ -47,7 +51,7 @@ move_files() {
                     rm -rf "$targetFile"
 
                     execute \
-                        "mv $sourceFile $targetFile" \
+                        "cp $sourceFile $targetFile" \
                         "$targetFile → $sourceFile"
 
                 else
